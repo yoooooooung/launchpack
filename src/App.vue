@@ -28,13 +28,13 @@
                 class="final"
                 :style="{ color: finalprice.color, fontSize: finalprice.size }"
               >
-                {{ one.finalprice || comma }}원
+                {{ one.finalprice | comma }}원
               </div>
               <div
                 class="saleAmount"
                 :style="{ color: saleamount.color, fontSize: saleamount.size }"
               >
-                - {{ one.originalprice - one.finalprice }}원
+                - {{ (one.originalprice - one.finalprice) | comma }}원
               </div>
             </div>
             <div
@@ -44,7 +44,7 @@
                 fontSize: originalprice.size,
               }"
             >
-              {{ one.originalprice || comma }}원
+              {{ one.originalprice | comma }}원
             </div>
           </div>
         </div>
@@ -91,7 +91,6 @@
 </template>
 
 <script>
-//import Vue from "vue";
 const productsData = [
   {
     brand: "샘표",

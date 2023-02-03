@@ -10,7 +10,7 @@
           :key="one.name"
           :style="{ width: `calc(100% /${column} - (10px)` }"
         >
-          <img :src="`${one.imgurl}`" alt="진간장" />
+          <img :src="`${one.imgurl}`" :alt="`${one.name}`" />
           <div class="info">
             <h5 :style="{ color: brand.color, fontSize: brand.size }">
               {{ one.brand }}

@@ -5,8 +5,6 @@
       <div class="button" v-on:click="toNextMonth">&#10095;</div>
       {{ year }}년 {{ month }}월
     </div>
-    <!-- <div>{{ year }}년 {{ month }}월 {{ date }}일</div>
-    <div>마지막날 : {{ lastDate }}</div> -->
     <div id="calendar">
       <div v-for="one in days" :key="one">{{ one }}</div>
       <div
@@ -85,8 +83,6 @@ export default {
         { length: 6 - this.lastday },
         (v, i) => i + 1
       );
-      console.log("setCalendar실행");
-      console.log("lastday", this.lastday);
     },
     toPrevMonth: function () {
       if (this.selected.month() < 0) {
